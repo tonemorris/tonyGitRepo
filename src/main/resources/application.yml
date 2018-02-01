@@ -1,0 +1,13 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+server:
+  context-path: /dashboard
+  port: 9090
+  
+logging:
+  file: app.log
+  
+baseUrl: http://localhost:8088/account
