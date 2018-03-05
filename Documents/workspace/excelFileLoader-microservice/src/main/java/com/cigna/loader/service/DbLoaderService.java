@@ -31,7 +31,7 @@ public class DbLoaderService {
 	 */
 	public void fileUpload(WatchEvent<?> event) {
 		jdbcTemplate = new JdbcTemplate(h2Datasource);
-		List<WorkProc> workProcList = jdbcTemplate.query("SELECT * FROM CSVREAD('\\users\\anthonymorris\\LoriTest.csv')",
+		List<WorkProc> workProcList = jdbcTemplate.query("SELECT * FROM CSVREAD('\\users\\anthonymorris\\" +event.context()+ "')",
 				new BeanPropertyRowMapper<WorkProc>(WorkProc.class));
 	
 		System.out.println(workProcList);
