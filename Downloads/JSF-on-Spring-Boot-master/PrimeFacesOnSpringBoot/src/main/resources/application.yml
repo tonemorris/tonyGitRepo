@@ -1,0 +1,11 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+
+server.port: 9090
+
+urls:
+ workItemUrl: http://gturnquist-quoters.cfapps.io/api/random
+---

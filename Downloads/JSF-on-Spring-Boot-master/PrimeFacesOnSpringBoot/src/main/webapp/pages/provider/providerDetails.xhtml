@@ -1,0 +1,102 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core"
+	template="/templates/template.xhtml">
+	<ui:define name="metadata">
+	</ui:define>
+	<ui:define name="content">
+		<h:panelGrid columns="3">
+			<h3 style="color: #0560a5">Verify Provider Details</h3>
+		</h:panelGrid>
+
+		<p:layout>
+			<p:layoutUnit position="west" header="Client File Record"
+				style="min-width:200px;min-height:200px;">
+				<h:panelGrid columns="1" cellpadding="5" >
+					<p:outputLabel value="NAME:" style="color: #0560a5" />
+					<p:outputLabel value="#{providerBean.name}"
+						style="color: #0560a5" />
+
+					<p:outputLabel value="ADDRESS:" style="color: #0560a5" />
+					<p:outputLabel
+						value="123 Main Street"
+						style="color: #0560a5" />
+					<p:outputLabel
+						value="2 South Park"
+						style="color: #0560a5" />
+					<p:outputLabel
+						value="Colorado 80440-8675 "
+						style="color: #0560a5" />
+
+					<p:outputLabel value="PHONE:" style="color: #0560a5" />
+					<p:outputLabel value="(XXX) XXX - XXXX" style="color: #0560a5" />
+
+					<p:outputLabel value="FAX:" style="color: #0560a5" />
+					<p:outputLabel value="(XXX) XXX - XXXX" style="color: #0560a5" />
+
+				</h:panelGrid>
+
+				<p:separator/>
+				<h:panelGrid columns="3" cellspacing="10">
+					<p:spacer width="10" height="10" />
+					<p:commandButton value="Submit" />
+					<p:commandButton value="Cancel" />
+				</h:panelGrid>
+			</p:layoutUnit>
+
+			<p:layoutUnit position="center">
+				<h:panelGrid columns="1">
+					<h:outputText value="Is this information correct? " />
+					<p:spacer width="10" height="10" />
+					<p:selectOneButton >
+						<f:selectItem itemLabel="Yes" itemValue="Xbox One" />
+						<f:selectItem itemLabel="No" itemValue="PS4" />
+						<f:selectItem itemLabel="Don't Know" itemValue="Wii U" />
+					</p:selectOneButton>
+				</h:panelGrid>
+
+
+				<p:spacer height="20" width="100%" />
+				<p:separator />
+				<p:splitButton value="How did you verify?" rendered="false"
+					icon="ui-icon-disk">
+					<p:menuitem value="Google" icon="ui-icon-arrowrefresh-1-w" />
+					<p:menuitem value="NCI" icon="ui-icon-close" />
+					<p:separator />
+					<p:menuitem value="Homepage" url="/index.xhtml"
+						icon="ui-icon-extlink" />
+				</p:splitButton>
+			</p:layoutUnit>
+			<p:layoutUnit position="east"
+				style="min-width:400px;min-height:200px;">
+				<h3>44% complete</h3>
+				<p:progressBar value="50" labelTemplate="44%" displayOnly="true" />
+				<p:outputLabel value="14 of 32 Verifications completed today" />
+				<p:spacer height="20" width="100%" />
+				<p:separator />
+
+				<h:panelGrid columns="1" cellpadding="5">
+					<p:outputLabel value="PAYER:" />
+					<p:outputLabel value="Dean Health Plan" />
+
+					<p:outputLabel value="PROVIDER:" />
+					<p:outputLabel value="Sacred Heart Hospital" />
+
+				</h:panelGrid>
+				<h:panelGrid columns="2" cellpadding="5">
+					<p:outputLabel value="ID:" />
+					<p:outputLabel value="123" />
+
+					<p:outputLabel value="TIN:" />
+					<p:outputLabel value="123456" />
+
+					<p:outputLabel value="NPI:" />
+					<p:outputLabel value="987654" />
+
+				</h:panelGrid>
+			</p:layoutUnit>
+		</p:layout>
+	</ui:define>
+</ui:composition>

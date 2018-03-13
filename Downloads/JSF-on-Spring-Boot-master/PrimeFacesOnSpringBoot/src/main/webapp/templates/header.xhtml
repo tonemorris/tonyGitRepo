@@ -1,0 +1,68 @@
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+	<h:form>
+		<p:layout style="min-width:400px;min-height:180px;">
+			<p:layoutUnit position="center" style="background-color: #7bd0f2;">
+				<p:toolbar>
+					<f:facet name="right">
+						<h:outputText value="#{session.lastAccessedTime}"
+							style="color: #0560a5">
+							<f:convertDateTime dateStyle="full" timeZone="EST" type="date" />
+						</h:outputText>
+						<p:spacer width="5" />
+						<h:outputText value="|" style="color: #0560a5" />
+						<p:spacer width="5" />
+						<h:outputText value="Welcome" style="color: #0560a5" />
+						<p:spacer width="5" />
+						<h:outputText value="Tony Morris" style="color: #0560a5" />
+						<p:spacer width="5" />
+						<p:menuButton value="">
+							<p:menuitem value="Logout" style="color: #0560a5" />
+							<p:menuitem value="Home" style="color: #0560a5"
+								outcome="/index.xhtml" />
+						</p:menuButton>
+					</f:facet>
+				</p:toolbar>
+
+				<h:panelGroup style="background-color: #0560a5;min-height: 134px"
+					layout="block">
+					<p:commandLink id="dynaButton" styleClass="fa fa-bars"
+						style="height: 35px;font-size:36;position: absolute;left: 20px;top: 130px;color:white" />
+					<p:outputPanel id="menuPanel" layout="block">
+						<p:slideMenu overlay="true" trigger="dynaButton" my="left top"
+							at="left bottom" style="width:280px;height:300px;">
+							<p:submenu label="Pages" icon="ui-icon ui-icon-refresh">
+								<p:menuitem value="Verify Provider Details"
+									url="/pages/page1.xhtml" />
+								<p:menuitem value="Another Request Type"
+									url="/pages/page2.xhtml" />
+							</p:submenu>
+							<p:submenu label="More Pages" icon="ui-icon ui-icon-refresh">
+								<p:menuitem value="Page 3" url="/pages/page3.xhtml" />
+								<p:menuitem value="Page 4" url="/pages/page4.xhtml" />
+							</p:submenu>
+						</p:slideMenu>
+					</p:outputPanel>
+					<p:spacer width="50" />
+					<p:graphicImage value="/images/intranet.png" width="220px" />
+					<h:outputText value="Audit Support Portal"
+						style="color:white;position: absolute;left: 260px;top: 100px;font-size: 20;font-style: oblique;font-weight: bold" />
+					<p:commandButton icon="ui-icon-search"
+						style="margin-right:10px;position: absolute;left: 1450px;top: 60px;" />
+					<p:inputText
+						style="margin-right:10px;position: absolute;left: 1500px;top: 60px;"
+						placeholder="Search" />
+				</h:panelGroup>
+
+			</p:layoutUnit>
+
+		</p:layout>
+	</h:form>
+
+</ui:composition>
