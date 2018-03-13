@@ -1,4 +1,4 @@
-package com.tivo.ui.bean;
+package com.cigna.ui.bean;
 
 import java.io.Serializable;
 import javax.annotation.PostConstruct;

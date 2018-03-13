@@ -14,7 +14,7 @@
 			<p:layout>
 				<p:layoutUnit position="center" style="border-style: none">
 					<p:tabView>
-						<p:tab title="Dashboard">
+						<p:tab title="Core">
 							<div style="height: 500px">
 								<h:form>
 									<p:growl id="msgs" showDetail="true" />
@@ -23,50 +23,6 @@
 										<p:ajax event="reorder"
 											listener="#{dashboardView.handleReorder}" update="msgs" />
 
-										<p:panel id="sports" header="Work Queue">
-											<p:dataTable id="cars1" var="car"
-												value="#{dtResizableColumnsView.cars1}"
-												resizableColumns="true"
-												style="margin-bottom:20px;width:700px;">
-												<p:column headerText="Item Name">
-													<h:outputText value="#{car.id}" />
-												</p:column>
-												<p:column headerText="Item Type">
-													<h:outputText value="#{car.year}" />
-												</p:column>
-												<p:column headerText="Status">
-													<h:outputText value="#{car.brand}" />
-												</p:column>
-												<p:column headerText="Deadline">
-													<h:outputText value="#{car.color}" />
-												</p:column>
-											</p:dataTable>
-										</p:panel>
-
-										<p:panel id="finance" header="Notifications">
-											<p:dataTable var="car"
-												value="#{dtResizableColumnsView.cars1}"
-												resizableColumns="true"
-												style="margin-bottom:20px;width:700px;">
-												<p:column headerText="Subject">
-													<h:outputText value="#{car.id}" />
-												</p:column>
-												<p:column headerText="Initiator">
-													<h:outputText value="#{car.year}" />
-												</p:column>
-												<p:column headerText="Date">
-													<h:outputText value="#{car.brand}" />
-												</p:column>
-												<p:column headerText="Time">
-													<h:outputText value="#{car.color}" />
-												</p:column>
-											</p:dataTable>
-										</p:panel>
-
-										<p:panel id="scoreboard" header="Object Scoreboard">
-
-										</p:panel>
-
 									</p:dashboard>
 
 									<div style="clear: both" />
@@ -74,39 +30,13 @@
 							</div>
 
 						</p:tab>
-						<p:tab title="Work Queue">
+						<p:tab title="Home Delivery">
 							<h:panelGrid columns="2" cellpadding="10">
 								<p:graphicImage name="demo/images/godfather/godfather2.jpg" />
 								<h:outputText value="Francis Ford Coppola's legendary..." />
 							</h:panelGrid>
 						</p:tab>
-						<p:tab title="Notifications">
-							<h:panelGrid columns="2" cellpadding="10">
-								<p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-								<h:outputText value="After a break of more than 15 years..." />
-							</h:panelGrid>
-						</p:tab>
-
-						<p:tab title="Tickets">
-							<h:panelGrid columns="2" cellpadding="10">
-								<p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-								<h:outputText value="After a break of more than 15 years..." />
-							</h:panelGrid>
-						</p:tab>
-
-						<p:tab title="Activity Sheet">
-							<h:panelGrid columns="2" cellpadding="10">
-								<p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-								<h:outputText value="After a break of more than 15 years..." />
-							</h:panelGrid>
-						</p:tab>
-
-						<p:tab title="Network Update Archive">
-							<h:panelGrid columns="2" cellpadding="10">
-								<p:graphicImage name="demo/images/godfather/godfather3.jpg" />
-								<h:outputText value="After a break of more than 15 years..." />
-							</h:panelGrid>
-						</p:tab>
+						
 					</p:tabView>
 
 				</p:layoutUnit>
