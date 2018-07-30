@@ -4,6 +4,8 @@ spring:
 spring:
   profiles: default
   
+logging.file: /logs/excel.log
+ 
 spring.h2.console.enabled: true
 spring.h2.console.path: /h2-console
 
@@ -19,4 +21,4 @@ h2.datasource.username: sa
 h2.datasource.password:
 
 # Watcher Service
-minitor.folder.path: /users/anthonymorris
+minitor.folder.path: /logs/

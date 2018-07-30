@@ -1,5 +1,13 @@
 package com.cigna.loader;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +37,9 @@ public class ExcelLoaderApplication implements CommandLineRunner {
 	@Override
     public void run(String... strings) throws Exception {
         LOGGER.info("I'm running !");
-
-        new Thread(watcherService, "watcher-service").start();
+        
+       
+       new Thread(watcherService, "watcher-service").start();
     }
 }
+
