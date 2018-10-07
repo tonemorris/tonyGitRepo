@@ -1,0 +1,6 @@
+logging:
+  file: /logs/myapp/app.log
+  
+log.file.localtion: /logs/myapp/
+
+spring.data.mongodb.uri: mongodb://localhost:27017/batchdb
