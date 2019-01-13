@@ -1,11 +1,5 @@
-spring:
-  cloud:
-    stream:
-      kafka:
-        binder:
-          brokers: localhost:9092
-      bindings:
-        input:
-          destination: myprocdest
+
           
 server.port: 8091
+
+spring.activemq.broker-url: tcp://localhost:61616
