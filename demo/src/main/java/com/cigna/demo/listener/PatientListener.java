@@ -12,16 +12,16 @@ import com.cigna.demo.events.StringRulesEvent;
 
 @Component
 public class PatientListener {
-	
+
 	@Autowired
 	private CleansingRulesStep cleansingRuleStep;
-	
+
 	@SuppressWarnings("unchecked")
 	@EventListener(condition = "#event.rule == 'stringCleansingRule'")
-    public void handleStringRules (StringRulesEvent event) {
-        System.out.print("context StringRulesEvent event fired: ");
-        System.out.println(event);
+	public void handleStringRules(StringRulesEvent event) {
+		System.out.print("context StringRulesEvent event fired: ");
+		System.out.println(event);
 		cleansingRuleStep.runStringCleansingRule((List<PatientProfile>) event.getSource());
 
-    }
+	}
 }
