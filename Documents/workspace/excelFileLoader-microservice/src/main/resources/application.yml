@@ -1,0 +1,24 @@
+spring:
+  profiles.active: default
+---
+spring:
+  profiles: default
+  
+logging.file: /logs/excel.log
+ 
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2-console
+
+mysql.datasource.url: jdbc:mysql://localhost/test
+mysql.datasource.username: root
+mysql.datasource.password:
+mysql.datasource.driver-class-name: com.mysql.jdbc.Driver
+
+  
+h2.datasource.driver-class-name: org.h2.Driver
+h2.datasource.url: jdbc:h2:mem:db;DB_CLOSE_DELAY=-1
+h2.datasource.username: sa
+h2.datasource.password:
+
+# Watcher Service
+minitor.folder.path: /logs/
