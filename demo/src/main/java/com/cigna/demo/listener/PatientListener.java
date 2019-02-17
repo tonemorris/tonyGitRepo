@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
 
-import com.cigna.demo.CleansingRulesStep;
-import com.cigna.demo.PatientProfile;
+import com.cigna.demo.domain.PatientProfile;
 import com.cigna.demo.events.StringRulesEvent;
+import com.cigna.demo.workflow.steps.CleansingRulesStep;
 
 @Component
 public class PatientListener {
@@ -22,6 +22,5 @@ public class PatientListener {
 		System.out.print("context StringRulesEvent event fired: ");
 		System.out.println(event);
 		cleansingRuleStep.runStringCleansingRule((List<PatientProfile>) event.getSource());
-
 	}
 }

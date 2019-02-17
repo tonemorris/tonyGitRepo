@@ -5,7 +5,7 @@ import static java.lang.String.format;
 import org.springframework.stereotype.Component;
 
 import com.cigna.demo.validator.SimpleValidation;
-import com.cigna.demo.validator.Validation;
+import com.cigna.demo.validator.interfaces.Validation;
 
 @Component
 public class StringValidationHelpers {
@@ -40,7 +40,7 @@ public class StringValidationHelpers {
 		return SimpleValidation.from((s) -> s.contains(c), format("must contain %s", c));
 	}
 	
-	public static Validation<String> notcontains(String c){
+	public static Validation<String> containSpecialChars(String c){
 		return SimpleValidation.from((s) -> s.contains(c), format("must not contain any of these special chars: %s", c));
 	}
 	

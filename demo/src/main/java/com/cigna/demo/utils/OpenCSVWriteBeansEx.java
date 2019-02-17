@@ -1,4 +1,4 @@
-package com.cigna.demo;
+package com.cigna.demo.utils;
 
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -9,6 +9,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.cigna.demo.domain.PatientProfile;
 import com.opencsv.CSVWriter;
 import com.opencsv.bean.ColumnPositionMappingStrategy;
 import com.opencsv.bean.StatefulBeanToCsv;

@@ -8,6 +8,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Component;
 
+import com.cigna.demo.domain.PatientProfile;
 import com.cigna.demo.events.StringRulesEvent;
 
 @Component

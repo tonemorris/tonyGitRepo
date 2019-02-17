@@ -3,7 +3,7 @@ package com.cigna.demo.validator.helper;
 import static java.lang.String.format;
 
 import com.cigna.demo.validator.SimpleValidation;
-import com.cigna.demo.validator.Validation;
+import com.cigna.demo.validator.interfaces.Validation;
 
 
 public class IntegerValidationHelpers {

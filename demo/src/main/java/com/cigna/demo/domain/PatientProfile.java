@@ -1,4 +1,4 @@
-package com.cigna.demo;
+package com.cigna.demo.domain;
 
 public class PatientProfile {
 
@@ -63,8 +63,4 @@ public class PatientProfile {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-
-	
-    
-   
 }

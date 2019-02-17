@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.context.ApplicationEvent;
 
-import com.cigna.demo.PatientProfile;
+import com.cigna.demo.domain.PatientProfile;
 
 public class StringRulesEvent extends ApplicationEvent {
 	private static final long serialVersionUID = 1L;

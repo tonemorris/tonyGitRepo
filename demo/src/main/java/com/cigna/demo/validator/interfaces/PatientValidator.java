@@ -1,6 +1,6 @@
-package com.cigna.demo.validator;
+package com.cigna.demo.validator.interfaces;
 
-import com.cigna.demo.PatientProfile;
+import com.cigna.demo.domain.PatientProfile;
 
 public interface PatientValidator {
 	

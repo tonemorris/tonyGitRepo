@@ -1,4 +1,6 @@
-package com.cigna.demo.validator;
+package com.cigna.demo.validator.interfaces;
+
+import com.cigna.demo.validator.ValidationResult;
 
 @FunctionalInterface
 public interface Validation<K> {

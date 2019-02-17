@@ -2,6 +2,8 @@ package com.cigna.demo.validator;
 
 import java.util.function.Predicate;
 
+import com.cigna.demo.validator.interfaces.Validation;
+
 public class SimpleValidation<K> implements Validation<K> {
 
 	private Predicate<K> predicate;
