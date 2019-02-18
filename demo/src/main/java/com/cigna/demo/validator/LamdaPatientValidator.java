@@ -5,6 +5,8 @@ import com.cigna.demo.validator.interfaces.PatientValidator;
 
 import static com.cigna.demo.validator.helper.StringValidationHelpers.*;
 
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +20,7 @@ public class LamdaPatientValidator implements PatientValidator {
 	private int firstnameMin;
 
 	@Value("${string.cleansing.gender.default.value.rule}")
-	private String gender;
+	private String genderDefaultValue;
 
 	public void validate(PatientProfile patientProfile) {
 		notNull.and(between(firstnameMin, 12).and(containSpecialChars(specialChar))).test(patientProfile.getFirstName())
@@ -29,5 +31,8 @@ public class LamdaPatientValidator implements PatientValidator {
 				.throwIfInvalid("phoneNumber for Id: " + patientProfile.getId());
 		notNull.and(between(1, 1)).test(patientProfile.getGender())
 				.throwIfInvalid("gender for Id: " + patientProfile.getId());
+		//set gender default value
+		patientProfile.setGender(Optional.ofNullable(patientProfile.getGender()).orElseGet(() -> genderDefaultValue));
+		
 	}
 }
