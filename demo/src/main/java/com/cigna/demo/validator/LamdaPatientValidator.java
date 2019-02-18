@@ -14,7 +14,7 @@ public class LamdaPatientValidator implements PatientValidator {
 	@Value("${string.cleansing.special.chars.rules}")
 	private String specialChar;
 
-	@Value("${string.cleansing.firstname.min.length.rule}")
+	@Value("${string.cleansing.firstname.required.min.length.rule")
 	private int firstnameMin;
 
 	public void validate(PatientProfile patientProfile) {

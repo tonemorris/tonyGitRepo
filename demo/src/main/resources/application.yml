@@ -1,3 +1,8 @@
 string.cleansing.special.chars.rules: '#  @ | !'
-string.cleansing.firstname.min.length.rule: 2
+
+string.cleansing.firstname.required.min.length.rule: 2
 string.cleansing.firstname.max.length.rule: 12
+
+string.cleansing.lastname.required.min.length.rule: 2
+string.cleansing.lastname.max.length.rule: 12
+
