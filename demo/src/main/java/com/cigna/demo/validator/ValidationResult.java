@@ -35,7 +35,8 @@ public class ValidationResult {
 		if(!isvalid()) logger.error(fieldName + " : " + getMesssage());
 	}
 	
+	
 	public String getMesssage() {
 		return messsage;
-	}
+	}	
 }

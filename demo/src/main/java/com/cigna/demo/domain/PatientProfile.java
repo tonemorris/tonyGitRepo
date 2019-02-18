@@ -6,6 +6,8 @@ public class PatientProfile {
     private String firstName;
     private String lastName;
     private String phoneNumber;
+    private String gender;
+
 
     private double price;
 
@@ -63,4 +65,14 @@ public class PatientProfile {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
+	}
+	
+	
 }

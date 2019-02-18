@@ -12,7 +12,7 @@ public class StringValidationHelpers {
 	
 	
 	public static Validation<String> notNull = SimpleValidation.from((s) -> s != null, "must not be null.");
-	
+		
 	public static Validation<String> moreThan(int size){
 		return SimpleValidation.from((s) -> s.length() >= size, format("must have more than %s chars.", size));
 	}

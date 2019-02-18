@@ -14,8 +14,11 @@ public class LamdaPatientValidator implements PatientValidator {
 	@Value("${string.cleansing.special.chars.rules}")
 	private String specialChar;
 
-	@Value("${string.cleansing.firstname.required.min.length.rule")
+	@Value("${string.cleansing.firstname.required.min.length.rule}")
 	private int firstnameMin;
+
+	@Value("${string.cleansing.gender.default.value.rule}")
+	private String gender;
 
 	public void validate(PatientProfile patientProfile) {
 		notNull.and(between(firstnameMin, 12).and(containSpecialChars(specialChar))).test(patientProfile.getFirstName())
@@ -24,5 +27,7 @@ public class LamdaPatientValidator implements PatientValidator {
 				.throwIfInvalid("lastname for Id: " + patientProfile.getId());
 		phonebetween(1, 10).test(patientProfile.getPhoneNumber())
 				.throwIfInvalid("phoneNumber for Id: " + patientProfile.getId());
+		notNull.and(between(1, 1)).test(patientProfile.getGender())
+				.throwIfInvalid("gender for Id: " + patientProfile.getId());
 	}
 }
