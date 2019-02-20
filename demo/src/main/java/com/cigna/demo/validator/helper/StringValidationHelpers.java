@@ -2,6 +2,9 @@ package com.cigna.demo.validator.helper;
 
 import static java.lang.String.format;
 
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
 import org.springframework.stereotype.Component;
 
 import com.cigna.demo.validator.SimpleValidation;
@@ -40,8 +43,8 @@ public class StringValidationHelpers {
 		return SimpleValidation.from((s) -> s.contains(c), format("must contain %s", c));
 	}
 	
-	public static Validation<String> containSpecialChars(String c){
-		return SimpleValidation.from((s) -> s.contains(c), format("must not contain any of these special chars: %s", c));
+	public static Validation<String> containSpecialChars(String[] c){
+		return SimpleValidation.from((s) -> !Arrays.stream(c).anyMatch(s::contains), format("must not contain any of these special chars: %s", c));
 	}
 	
 }

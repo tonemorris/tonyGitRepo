@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 
 public class ValidationResult {
 	private boolean valid;
-	private String messsage;
+	private static String messsage;
 	
 	private static final Logger logger = LoggerFactory.getLogger(ValidationResult.class);	
 
@@ -20,7 +20,7 @@ public class ValidationResult {
 	
 	private ValidationResult(boolean valid, String messsage) {
 		this.valid = valid;
-		this.messsage = messsage;
+		ValidationResult.messsage = messsage;
 	}
 
 	public boolean isvalid() {
@@ -31,12 +31,15 @@ public class ValidationResult {
 		if(!isvalid()) logger.error(getMesssage());
 	}
 	
-	public void throwIfInvalid(String fieldName) {
-		if(!isvalid()) logger.error(fieldName + " : " + getMesssage());
+	public boolean throwIfInvalid(String fieldName) {
+		if(!isvalid()) {
+			logger.error(fieldName + " : " + getMesssage());
+		} 
+	return isvalid();
 	}
 	
 	
-	public String getMesssage() {
+	public static String getMesssage() {
 		return messsage;
 	}	
 }

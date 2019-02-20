@@ -1,4 +1,4 @@
-string.cleansing.special.chars.rules: '#  @ | !'
+string.cleansing.special.chars.rules: '#,@,|,!'
 
 string.cleansing.firstname.required.min.length.rule: 2
 string.cleansing.firstname.max.length.rule: 12
